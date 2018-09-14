@@ -473,3 +473,14 @@ CALL embedding.deepgl(null, null, {
 ('Shuffle #10:   ', {'micro': 0.1967100753941055, 'macro': 0.04421550257801547})
 ('Average score:', {'micro': 0.18686265734885293, 'macro': 0.05116205269290506})
 -------------------
+
+CALL embedding.deepgl(null, null, {
+  writeProperty: "deepgl",
+  pruningLambda: 0.7,
+  diffusions: 3,
+  iterations: 1
+})
+
+```
+Neo.ClientError.Procedure.ProcedureCallFailed: Failed to invoke procedure `embedding.deepgl`: Caused by: java.lang.OutOfMemoryError: Physical memory usage is too high: physicalBytes = 16G > maxPhysicalBytes = 16G
+```
