@@ -475,10 +475,10 @@ CALL embedding.deepgl(null, null, {
 -------------------
 
 CALL embedding.deepgl(null, null, {
-  writeProperty: "deepgl",
-  pruningLambda: 0.7,
+  writeProperty: "deepgl_lambds7_it2",
+  pruningLambda: 0.65,
   diffusions: 3,
-  iterations: 1
+  iterations: 2
 })
 
 ```
