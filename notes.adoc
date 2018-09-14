@@ -474,13 +474,26 @@ CALL embedding.deepgl(null, null, {
 ('Average score:', {'micro': 0.18686265734885293, 'macro': 0.05116205269290506})
 -------------------
 
+```
 CALL embedding.deepgl(null, null, {
   writeProperty: "deepgl_lambds7_it2",
   pruningLambda: 0.65,
   diffusions: 3,
   iterations: 2
 })
+```
 
 ```
+2018-09-14 22:07:14.086+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Applying operators
+2018-09-14 22:07:32.332+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Applied operators
+2018-09-14 22:07:32.332+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Diffuse features
+2018-09-14 22:07:50.889+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Diffused features
+2018-09-14 22:08:08.531+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Feature Pruning: Creating features graph
+2018-09-14 22:08:08.532+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Creating IdMap - 1110 nodes
+2018-09-14 22:08:08.532+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Created IdMap
+2018-09-14 22:08:08.532+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Size of combined embedding: [10351, 1110]
+2018-09-14 22:08:08.532+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Number of prev features: 30
+2018-09-14 22:08:08.532+0000 INFO  [neo4j.BoltWorker-5 [bolt] [/127.0.0.1:40362] ] DeepGL 100% Creating AdjacencyMatrix
+
 Neo.ClientError.Procedure.ProcedureCallFailed: Failed to invoke procedure `embedding.deepgl`: Caused by: java.lang.OutOfMemoryError: Physical memory usage is too high: physicalBytes = 16G > maxPhysicalBytes = 16G
 ```
