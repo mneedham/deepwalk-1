@@ -133,6 +133,12 @@ sys	0m54.109s
 
 ----
 
+= With Neo4j
+
+```
+python blog_to_neo4j.py
+```
+
 CALL embedding.deepWalk(null, null, {
   numberOfWalks: 80,
   vectorSize: 128,
@@ -445,28 +451,6 @@ CALL embedding.deepgl(null, null, {
 ('Shuffle #9:   ', {'micro': 0.27574291637871456, 'macro': 0.12681878489959855})
 ('Shuffle #10:   ', {'micro': 0.2395543175487465, 'macro': 0.10473521875489279})
 ('Average score:', {'micro': 0.26617417564665247, 'macro': 0.11867485609789383})
-
-CALL embedding.deepgl(null, null, {
-  writeProperty: "deepgl",
-  pruningLambda: 0.5,
-  diffusions: 3,
-  iterations: 2
-})
-
--------------------
-('Train percent:', 0.9)
-('Shuffle #1:   ', {'micro': 0.27493074792243766, 'macro': 0.11489517496872705})
-('Shuffle #2:   ', {'micro': 0.25840336134453784, 'macro': 0.1163701208018631})
-('Shuffle #3:   ', {'micro': 0.24879393521709167, 'macro': 0.11279508179868117})
-('Shuffle #4:   ', {'micro': 0.26212227687983136, 'macro': 0.11969013160560778})
-('Shuffle #5:   ', {'micro': 0.25408719346049047, 'macro': 0.12244435228962623})
-('Shuffle #6:   ', {'micro': 0.26239669421487605, 'macro': 0.12543128165304365})
-('Shuffle #7:   ', {'micro': 0.2563573883161512, 'macro': 0.10841608189168458})
-('Shuffle #8:   ', {'micro': 0.27635135135135136, 'macro': 0.12751397416709007})
-('Shuffle #9:   ', {'micro': 0.2778561354019746, 'macro': 0.12518329885374874})
-('Shuffle #10:   ', {'micro': 0.26842837273991654, 'macro': 0.13090717987533873})
-('Average score:', {'micro': 0.2639727456848659, 'macro': 0.12036466779054111})
--------------------
 
 CALL embedding.deepgl(null, null, {
   writeProperty: "deepgl_point5_it3",
