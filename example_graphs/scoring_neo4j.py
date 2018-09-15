@@ -81,7 +81,7 @@ def main():
         MATCH (l:Label) WITH l ORDER BY l.id  WITH collect(l) AS labels
         MATCH (n:Node)
         RETURN n.id AS id,
-               n.`deepgl` AS embedding, 
+               n.`deepgl_lambds7_it2` AS embedding, 
                algo.ml.oneHotEncoding(labels,  [(n)-[:LABEL]->(l) | l]) AS labels
         ORDER BY n.id
         """)

@@ -497,3 +497,27 @@ CALL embedding.deepgl(null, null, {
 
 Neo.ClientError.Procedure.ProcedureCallFailed: Failed to invoke procedure `embedding.deepgl`: Caused by: java.lang.OutOfMemoryError: Physical memory usage is too high: physicalBytes = 16G > maxPhysicalBytes = 16G
 ```
+
+```
+CALL embedding.deepgl(null, null, {
+  writeProperty: "deepgl_lambds7_it2",
+  pruningLambda: 0.65,
+  diffusions: 3,
+  iterations: 2
+})
+```
+
+```
+('Train percent:', 0.9)
+('Shuffle #1:   ', {'micro': 0.6384341637010676, 'macro': 0.520350353080328})
+('Shuffle #2:   ', {'micro': 0.6629603891591382, 'macro': 0.5619301251534481})
+('Shuffle #3:   ', {'micro': 0.6662049861495845, 'macro': 0.5505533233820411})
+('Shuffle #4:   ', {'micro': 0.6468531468531469, 'macro': 0.5349758370676674})
+('Shuffle #5:   ', {'micro': 0.6657342657342658, 'macro': 0.5400574221118801})
+('Shuffle #6:   ', {'micro': 0.6593103448275862, 'macro': 0.5227057684611253})
+('Shuffle #7:   ', {'micro': 0.645473393227367, 'macro': 0.4971005648845362})
+('Shuffle #8:   ', {'micro': 0.6482377332411887, 'macro': 0.5041272100472856})
+('Shuffle #9:   ', {'micro': 0.6571825121443442, 'macro': 0.5559189337102943})
+('Shuffle #10:   ', {'micro': 0.6594101123595506, 'macro': 0.5142168335357707})
+('Average score:', {'micro': 0.6549801047397239, 'macro': 0.5301936371434376})
+```
